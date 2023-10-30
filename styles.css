@@ -9,34 +9,67 @@ body, header, nav, main, footer, h1, h2 {
     border: 0;
 }
 body {
-    background-color: #7CB9E8;
-    background-color: rgb(0, 128, 111) /*fallback color*/;
-    
+    background-color:#FEF0C9;
+     margin: auto;
+    width: 640px; 
+    padding: 50px;
+    font-family: 'Alfa Slab One'; font-size: 22px; 
+    color: #798a98;
+
 }
-img {
-    max-width: 100%;
-    display: block;
-}
+.header {
+    background-color:#FEF0C9;
+    text-align: center;
+    padding: 20px;
+   
+  }
+  
+
     
 nav ul {
     list-style-type: none;
+    color: #798a98;
+
 }
 
 nav li{
     font-family:  'Francois One', sans-serif; 
+    color: #798a98;
+
    
 }
 
+ul {
+    list-style:none;
+}
+  ul li{
+    display:inline-block; 
+    padding:0 7px; 
+    position:relative;
+}
+  ul li:not(:last-child)::after{
+    content:""; 
+    border:1px solid #e2e2e2;
+    border-width: 1px 1px 0 0;
+    position:absolute; 
+    right:-3px; 
+    top:0; 
+    height:100%;
+}
+
 #my-white-paragraph{
-    color:beige
+    color:rgb(163, 184, 206)
 }
 
 a {
     text-decoration: none;
 }
-div {
-    width: 550px;
-    border: 20px solid green;
-    padding: 60px;
-    margin: 20px;
-  }
+
+  nav a:visited{
+      color:#8B8378;
+}
+ 
+  
+ 
+
+  
