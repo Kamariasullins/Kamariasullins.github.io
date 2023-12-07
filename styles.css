@@ -70,15 +70,18 @@ a {
   }
 
   table{
-    width: 80;
+    width: 100;
     margin: 0 auto;
     border: 3px solid #000000; 
     border-collapse:collapse;
   }
   
-  table, tr, th{
-    border-collapse:collapse;
-    padding: 2px;
+  table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+  th, td {
+    background-color: #96D4D4;
   }
   
   caption{
