@@ -1,0 +1,33 @@
+table {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid rgb(255, 72, 0);
+    border-collapse: collapse;
+  }
+  
+  caption {
+    font-size: 2em;
+    padding: 2%;
+    margin-top: 2%;
+  }
+  
+  th, td {
+    border: 1px solid ;
+    padding: 10px;
+  }
+  
+  th {
+    background-color: rgb(171, 9, 9);
+  }
+  
+  tr:nth-child(odd) {
+    background-color: red;
+  }
+  
+  td[colspan] {
+    text-align: center;
+  }
+  
+  td[rowspan] {
+    vertical-align: top;
+  }
