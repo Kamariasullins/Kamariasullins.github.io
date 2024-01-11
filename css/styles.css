@@ -26,6 +26,24 @@ img, video{
 }
 
 /* Style rules for mobile viewport */
+/* Style  rules for  skip navigation link*/
+.skip {
+    position: absolute;
+    left: -999px
+}
+
+.skip:focus{
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    padding: 0.5%;
+    top:auto;
+    left:auto;
+    right: 1px;
+    z-index: 1;
+} 
+
+
 
 /* Style rule for header */
 header {
@@ -38,40 +56,33 @@ header img {
     margin: 0 auto;
 }
 
-/* Style rules for navigation area */
-nav {
-	padding: 1%;
-    margin-bottom: 1%;
-}
-
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-nav li {
-    font-size: 1.5em;
-    font-family: 'Francois One', sans-serif;
-    border-top: 1px solid #fff;
-}
-
-nav li:first-child {
-    border-top: none;
-}
-
-nav li a {
-    display: block;
+/* Style rules for hamburger area */
+.mobile-nav a{
     color: #fff;
-    padding: 0.5em 1em;
+    font-family: 'Francois One', sans-serif;
+    text-align: center;
+    font-size: 2em;
     text-decoration: none;
+    padding: 3%;
+    display: block;
 }
 
-/* Show mobile class, hide tablet-desktop class */
+
+.mobile-nav a.menu-icon{
+    display:block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+/* Show mobile class, hide tablet-desktop class and menu-links id */
 .mobile {
     display: block;
 }
 
-.tablet-desktop {
+.tablet-desktop, #menu-links {
     display: none;
 }
 
@@ -223,11 +234,13 @@ form #submit{
     border-radius: 10px;
 }
 /* Style rules for footer content */
-footer p {
+footer .copyright {
     font-size: 0.75em;
     text-align: center;
     color: #fff;
-    padding: 0 1em;
+    padding: 2% 4%;
+    float: left;
+    width: 75%;
 }
 
 footer p a {
@@ -235,6 +248,17 @@ footer p a {
     text-decoration: none;
 }
 
+.social{
+    float: right;
+    width: 20%;
+    padding: 2%;
+}
+
+.social img{
+    display: inline-block;
+    padding: 5%;
+
+}
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 630px), print {
     
@@ -243,7 +267,7 @@ footer p a {
         display: block;
     }
 
-    .mobile {
+    .mobile, .mobile-nav {
         display: none;
     }
     
@@ -251,10 +275,22 @@ footer p a {
     header {
         padding-bottom: 2%;
     }
+    nav {
+        padding: 1%;
+        margin-bottom: 1%;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        text-align: center;
+    }
+
+
     
     /* Tablet Viewport: Style rules for nav area */
     nav li {
-        border-top: none;
+        font-size: 1.5em;
+        font-family: 'Francois One' sans-serif;
         display: inline-block;
         border-right: 1px solid #fff;
     }
@@ -265,6 +301,9 @@ footer p a {
     
     nav li a {
         padding: 0.1em 0.75em;
+        display: block;
+        color:#fff;
+        text-decoration: none;
     }
     
     /* Tablet Viewport: Style rules for main content area */
@@ -311,9 +350,19 @@ footer p a {
         font-weight: bold;
     }
 
+    
     #exercises dd {
         padding: 0.5% 1% 2% 0;
     } 
+
+    .viewer{
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #example{
+        display: none;
+    }
     
     .tel-num {
         font-size: 1.25em;
@@ -349,6 +398,20 @@ footer p a {
         background-color: #ccc;
 
     }
+     /*Tablet Viewport: Animation*/
+     @keyframes text-animation {
+        0% {font-size: 1em; }
+        50% { font-size: 2em; }
+        100% { font-size: 1.35em; }
+     }
+ 
+     figcaption{
+         -webkit-animation-name: text-animation;
+         animation-name: text-animation;
+         -webkit-animation-delay: 3s;
+         animation-delay: 3s;
+         -webkit-animation-duration: 5s;
+         animation-duration: 5s;
 }
 
 /* Media Query for Desktop Viewport */
@@ -360,6 +423,25 @@ footer p a {
         float: left;
         padding-bottom: 0;
     }
+    /*Tablet Viewport: Animation*/
+       @keyframes text-animation {
+       0% {font-size: 1em; }
+       50% { font-size: 2em; }
+       100% { font-size: 1.35em; }
+    }
+
+    figcaption{
+        -webkit-animation-name: text-animation;
+        animation-name: text-animation;
+        -webkit-animation-delay: 3s;
+        animation-delay: 3s;
+        -webkit-animation-duration: 5s;
+        animation-duration: 5s;
+    }
+
+
+
+
     
     /* Desktop Viewport: Style rules for nav area */
     nav {
@@ -383,6 +465,7 @@ footer p a {
     nav li a:hover {
         color: #000;
         background-color: #fff;
+        transform: scale(1.3);
     }
     
     /* Desktop Viewport: Style Rules for main content */
@@ -410,6 +493,7 @@ footer p a {
     .frame:hover {
         opacity: 1;
         box-shadow: 8px 8px 10px #808080; 
+        transform: translateY(10px);
     }
     
     #weights, #cardio, #training {
@@ -420,6 +504,11 @@ footer p a {
 
     #exercises {
         clear: left;
+    }
+
+    .offer:hover{
+        transform: scale(1.25);
+        cursor: pointer;
     }
    /* desktop stying for form*/
    form{
@@ -457,4 +546,5 @@ footer p a {
         color: #000;
     }
     
+}
 }
