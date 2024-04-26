@@ -1,6 +1,6 @@
 /*  JavaScript 7th Edition
     Chapter 3
-    Hands-on Project 3-3
+    Hands-on Project 3-2
 
     Filename: styles.css
 */
@@ -82,43 +82,29 @@ article h2 {
    padding: 10px;
 }
 
-/* table styles */
+/* figure styles */
 
-table {
-   border-collapse: collapse;
+div#gallery {
+   display: flex;
+   flex-flow: row wrap;
+}
+
+div#gallery figure {
+   flex: 1 1 150px;
+   margin: 5px;
    border: 1px solid black;
-   width: 90%;
+   background-color:hsl(129,23%,58%);
+}
+
+div#gallery figure img {
+   display: block;
+   width: 100%;
+}
+
+div#gallery figure figcaption {
+   display: block;
+   text-align: center;
+   font-size: 0.85em;
+   padding: 3px;
    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-   margin: 0 auto 20px;
-}
-
-th, td {
-   border: 1px solid black;
-   padding: 7px;
-   vertical-align: top;
-}
-
-td {
-   background-color: white;
-   text-align: left;
-}
-
-td a {
-   color: blue;
-}
-
-th {
-   background-color: black;
-   color: white;
-   text-transform: uppercase;
-   font-size: 1.1em;
-}
-
-tr td:nth-of-type(1) {
-   width: 220px;
-   background-color: rgba(255,227,156,1.00);
-}
-
-tr td:nth-of-type(3) {
-   text-align: right;
 }
